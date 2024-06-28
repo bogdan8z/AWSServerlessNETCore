@@ -26,14 +26,16 @@ and set the access key from the user you have just created
 
 #### To do
 1. Connect to dynamodb
-2. Get data in an api
-3. Use api gateway
+2. CI/CD github->aws lambda using aws CodeBuild
 
 #### Links
+1. [AWS - Tutorial: Build and Test a Serverless Application with AWS Lambda](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/lambda-build-test-severless-app.html)
 1. [Udemy - AWS Lambda For The .NET Developer](https://www.udemy.com/course/aws-lambda-dotnet/)
+1. [AWS::Serverless::Function](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-function.html)
 2. [AWS - Create Free Tier account](https://aws.amazon.com/free/)
 3. [AWS - Step 1: Set Up an AWS Account and Create an Administrator User](https://docs.aws.amazon.com/streams/latest/dev/setting-up.html)
 4. [AWS - Security best practices for AWS account administrators](https://docs.aws.amazon.com/signin/latest/userguide/best-practices-admin.html)
 5. [AWS - Security best practices in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
 6. [AWS - Apply for $300 AWS Credits](https://aws-experience.com/amer/smb/exclusive-offers/aws-credits)
+7. [Continuous Integration: C# to AWS Lambda](https://maxhorstmann.net/blog/2017/05/22/ci-dotnetcore-lambda/)
    

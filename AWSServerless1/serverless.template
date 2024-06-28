@@ -2,22 +2,23 @@
   "AWSTemplateFormatVersion": "2010-09-09",
   "Transform": "AWS::Serverless-2016-10-31",
   "Description": "An AWS Serverless Application.",
-  "Resources": {
-    "Get": {
+  "Resources": {   
+    "GetAGreetingLambda": {
       "Type": "AWS::Serverless::Function",
       "Properties": {
+        "FunctionName": "GreetingLambdaFunction",
         "Architectures": [
           "x86_64"
         ],
-        "Handler": "AWSServerless1::AWSServerless1.Functions::Get",
+        "Handler": "AWSServerless1::AWSServerless1.Functions::GetAGreetingLambda",
         "Runtime": "dotnet6",
         "CodeUri": "",
         "MemorySize": 256,
         "Timeout": 30,
-        "Role": null,
-        "Policies": [
-          "AWSLambdaBasicExecutionRole"
-        ],
+         "Role": null,
+         "Policies": [
+            "AWSLambdaBasicExecutionRole"
+         ],
         "Environment": {
           "Variables": {
             "POWERTOOLS_SERVICE_NAME": "ServerlessGreeting",
@@ -29,10 +30,47 @@
           }
         },
         "Events": {
-          "RootGet": {
+          "ApiGreetings": {
             "Type": "Api",
             "Properties": {
-              "Path": "/",
+              "Path": "/greetings",
+              "Method": "GET"
+            }
+          }
+        }
+      }
+    },
+     "GetAllStudentsLambda": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "FunctionName": "AllStudentsLambdaFunction",
+        "Architectures": [
+          "x86_64"
+        ],
+        "Handler": "AWSServerless1::AWSServerless1.Functions::GetAllStudentsLambda",
+        "Runtime": "dotnet6",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 30,    
+        "Role": null,   
+         "Policies": [
+            "AWSLambdaBasicExecutionRole"
+         ],
+        "Environment": {
+          "Variables": {
+            "POWERTOOLS_SERVICE_NAME": "ServerlessStudents",
+            "POWERTOOLS_LOG_LEVEL": "Info",
+            "POWERTOOLS_LOGGER_CASE": "PascalCase",
+            "POWERTOOLS_TRACER_CAPTURE_RESPONSE": true,
+            "POWERTOOLS_TRACER_CAPTURE_ERROR": true,
+            "POWERTOOLS_METRICS_NAMESPACE": "ServerlessStudents"
+          }
+        },
+        "Events": {
+          "ApiStudents": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/students",
               "Method": "GET"
             }
           }
