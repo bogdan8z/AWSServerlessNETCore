@@ -24,6 +24,11 @@ and set the access key from the user you have just created
 
 <hr>
 
+#### To do
+1. Connect to dynamodb
+2. Get data in an api
+3. Use api gateway
+
 #### Links
 1. [Udemy - AWS Lambda For The .NET Developer](https://www.udemy.com/course/aws-lambda-dotnet/)
 2. [AWS - Create Free Tier account](https://aws.amazon.com/free/)
