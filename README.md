@@ -18,9 +18,9 @@ and set the access key from the user you have just created
 2. to deploy: right click on the project and select **Publish to AWS Lambda**
    1. you need to select the profile (default)
    2. it will ask for a bucket name and a stack name
-3. after the deployment is done it will create an Lambda Application Stack and S3 bucket
+3. after the deployment is done it will create an Lambda Application, CloudFormation Stack, an Api in API Gateway and S3 bucket
    1. we can check this in AWS by going to S3, CloudFormation and Lambda
-4. when we want to remove all the changes from AWS we can just remove the CF stack
+4. when we want to remove all the changes from AWS we can just remove the CF stack and the Api from API Gateway
 
 <hr>
 
