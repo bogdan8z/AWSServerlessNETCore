@@ -25,8 +25,10 @@ and set the access key from the user you have just created
 <hr>
 
 #### To do
-1. Connect to dynamodb
-2. CI/CD github->aws lambda using aws CodeBuild
+1. fix tests (cold start issue)
+2. Connect to dynamodb (get students)
+3. CI/CD github->aws lambda using aws CodeBuild
+
 
 #### Links
 1. [AWS - Tutorial: Build and Test a Serverless Application with AWS Lambda](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/lambda-build-test-severless-app.html)

@@ -58,7 +58,9 @@ public class Functions
 
         context.Logger.LogInformation($"aaa");
         var students = GetAllStudents();
+        
         string studentsJson = JsonConvert.SerializeObject(students);
+        
 
         var response = new APIGatewayProxyResponse
         {
