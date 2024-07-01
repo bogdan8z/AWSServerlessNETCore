@@ -1,6 +1,8 @@
 # AWS Serverless Application with Tests (.NET Core - C#) - Visual Studio
 
-
+This will create 2 AWS lamda functions that define 2 API endpoints which are accesible through API Gateway<br>
+GET /greetings<br>
+GET /students
 
 ### Prerequisites
 1. Create AWS user (only with access key) with admin rights and then generate an access key
@@ -27,7 +29,7 @@ and set the access key from the user you have just created
 #### To do
 1. fix tests (cold start issue)
 2. Connect to dynamodb (get students)
-3. CI/CD github->aws lambda using aws CodeBuild
+3. CI/CD github->aws lambda using aws CodeBuild / docker
 
 
 #### Links
