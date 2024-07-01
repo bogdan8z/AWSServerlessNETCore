@@ -53,14 +53,14 @@ public class Functions
     [Metrics(CaptureColdStart = true)]
     [Tracing(CaptureMode = TracingCaptureMode.ResponseAndError)]
     public APIGatewayProxyResponse GetAllStudentsLambda(APIGatewayProxyRequest request, ILambdaContext context)
-    {    
+    {
         Logger.LogInformation($"{nameof(GetAllStudents)}");
 
         context.Logger.LogInformation($"aaa");
         var students = GetAllStudents();
-        
+
         string studentsJson = JsonConvert.SerializeObject(students);
-        
+
 
         var response = new APIGatewayProxyResponse
         {
@@ -75,7 +75,7 @@ public class Functions
     [Tracing(SegmentName = "GetGreeting Method")]
     private static string GetGreeting()
     {
-       // Metrics.AddMetric("GetGreeting_Invocations", 1, MetricUnit.Count);
+       Metrics.AddMetric("GetGreeting_Invocations", 1, MetricUnit.Count);
 
         return "Hello Powertools for AWS Lambda (.NET) 456";
     }
@@ -83,13 +83,7 @@ public class Functions
     [Tracing(SegmentName = "GetAllStudents Method")]
     private static List<Student> GetAllStudents()
     {
-       // Metrics.AddMetric("GetAllStudents_Invocations", 1, MetricUnit.Count);
-        
-        
-        //AmazonDynamoDBClient client = new AmazonDynamoDBClient();
-        //DynamoDBContext dbContext = new DynamoDBContext(client);
-        //var data = await dbContext.ScanAsync<Student>(default).GetRemainingAsync();
-        //return data;
+        Metrics.AddMetric("GetAllStudents_Invocations", 1, MetricUnit.Count);
         return new List<Student>
         {
             new()

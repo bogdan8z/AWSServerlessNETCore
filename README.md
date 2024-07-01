@@ -4,6 +4,9 @@ This will create 2 AWS lamda functions that define 2 API endpoints which are acc
 GET /greetings<br>
 GET /students
 
+<br>
+For building the API this will use APIGatewayProxyRequest instead of traditional controller-based approach.
+
 ### Prerequisites
 1. Create AWS user (only with access key) with admin rights and then generate an access key
 2. Install AWS toolkit for Visual Studio locally from [**here**](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2022)
