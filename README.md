@@ -16,16 +16,17 @@ For building the API this will use APIGatewayProxyRequest instead of traditional
 and set the access key from the user you have just created
    
 ### Visual Studio
-1. create new project of type **Aws serverless application with tests (.net core - C#)**
+1. create new project of type **Aws serverless application with tests (.net core - C#)** and in Blueprint dialog select **Powertools for AWS Lambda**
+2. The new project contains
    1. **Functions.cs** contains all the lambda function that you will define
    2. **serverless.template** contains the template to create the AWS Application and also the Api Url
    3. **Readme.md** contains a description of the project
-2. to deploy: right click on the project and select **Publish to AWS Lambda**
+3. to deploy: right click on the project and select **Publish to AWS Lambda**
    1. you need to select the profile (default)
    2. it will ask for a bucket name and a stack name
-3. after the deployment is done it will create an Lambda Application, CloudFormation Stack, an Api in API Gateway and S3 bucket
+4. after the deployment is done it will create an Lambda Application, CloudFormation Stack, an Api in API Gateway and S3 bucket
    1. we can check this in AWS by going to S3, CloudFormation and Lambda
-4. when we want to remove all the changes from AWS we can just remove the CF stack and the Api from API Gateway
+5. when we want to remove all the changes from AWS we can just remove the CF stack and the Api from API Gateway
 
 <hr>
 
