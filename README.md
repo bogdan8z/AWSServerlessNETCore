@@ -1,4 +1,7 @@
-# AWS Serverless Application with Tests (.NET Core - C#) - Visual Studio
+# Deploy an AWS Lambda using Visual Studio and use in an existing project
+We will create a Lambda project, deploy it in AWS and then call it from our API
+
+## Step 1. AWS Serverless Application with Tests (.NET Core - C#) - Visual Studio
 
 This will create 2 AWS lamda functions that define 2 API endpoints which are accesible through API Gateway<br>
 GET /greetings<br>
@@ -28,7 +31,7 @@ and set the access key from the user you have just created
 4. when we want to remove all the changes from AWS we can just remove the CF stack and the Api from API Gateway
 
 
-## Integrate our project to an existing .NET project
+## Step 2. Integrate our project to an existing .NET project
 
 ### Presteps
 1. in Visual Studio open your api .NET Core project or create a new one (see MyNetCoreApi project)
@@ -57,7 +60,7 @@ and set the access key from the user you have just created
          }
       ```
 3. add a new service called LambdaService
-   1. here we will use the key from our new profile in order to create a **BasicAWSCredentials**
+   1. here we will use the keys from our new profile in order to create an **AWSCredentials** (check LambdaService.cs: use AwsProfileName or AwsKey/AwsSecretKey)
    2. with this credentials we need to create an **AmazonLambdaClient**
    3. create the method (**InvokeLambdaAsync**) that will invoke the lambda
 4. in our existing api project add a new controller (**NewLambdaController** for example)

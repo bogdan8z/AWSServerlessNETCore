@@ -4,7 +4,7 @@ using MyNetCoreApi.Services.Interfaces;
 namespace MyNetCoreApi.Controllers
 {    
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class NewLambdaController : ControllerBase
     {
         private const string StudentsLambdaName = "AllStudentsLambdaFunction";
