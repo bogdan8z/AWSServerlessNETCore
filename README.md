@@ -80,10 +80,11 @@ and set the access key from the user you have just created
 <hr>
 
 #### To do
-1. add error logs
-2. fix tests (cold start issue)
-3. Connect to dynamodb (get students)
-4. CI/CD github->aws lambda using aws CodeBuild / docker
+1. read key from config
+2. add error logs
+3. fix tests (cold start issue)
+4. Connect to dynamodb (get students)
+5. CI/CD github->aws lambda using aws CodeBuild / docker
 
 
 #### Links
