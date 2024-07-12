@@ -1,7 +1,7 @@
 # Deploy an AWS Lambda using Visual Studio and use in an existing project
 We will create a Lambda project, deploy it in AWS and then call it from our API
 
-## Step 1. AWS Serverless Application with Tests (.NET Core - C#) - Visual Studio
+### Step 1. AWS Serverless Application with Tests (.NET Core - C#) - Visual Studio
 
 This will create 2 AWS lamda functions that define 2 API endpoints which are accesible through API Gateway<br>
 GET /greetings<br>
@@ -10,7 +10,7 @@ GET /students
 <br>
 For building the API this will use APIGatewayProxyRequest instead of traditional controller-based approach.
 
-### Prerequisites
+#### Prerequisites
 1. Create AWS user (only with access key) with admin rights and then generate an access key
 2. Install AWS toolkit for Visual Studio locally from [**here**](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.AWSToolkitforVisualStudio2022)
 3. Locally run in cmd: 
@@ -18,7 +18,7 @@ For building the API this will use APIGatewayProxyRequest instead of traditional
 
 and set the access key from the user you have just created
    
-### Visual Studio
+#### Visual Studio
 1. create new project of type **Aws serverless application with tests (.net core - C#)**
    1. **Functions.cs** contains all the lambda function that you will define
    2. **serverless.template** contains the template to create the AWS Application and also the Api Url
@@ -31,12 +31,12 @@ and set the access key from the user you have just created
 4. when we want to remove all the changes from AWS we can just remove the CF stack and the Api from API Gateway
 
 
-## Step 2. Integrate our project to an existing .NET project
+### Step 2. Integrate our project to an existing .NET project
 
-### Presteps
+#### Presteps
 1. in Visual Studio open your api .NET Core project or create a new one (see MyNetCoreApi project)
 
-### Steps
+#### Steps
 1. in our Lambda project in **serverless.template** file we need to be sure there is set the **FunctionName**
 2.  Create AWS user (only with access key)  with perimission to execute lambda and then generate an access key
     1. create a user group with AWSLambda_ReadOnlyAccess policy
@@ -79,7 +79,7 @@ and set the access key from the user you have just created
 
 <hr>
 
-#### To do
+##### To do
 1. read key from config
 2. add error logs
 3. fix tests (cold start issue)
@@ -87,7 +87,7 @@ and set the access key from the user you have just created
 5. CI/CD github->aws lambda using aws CodeBuild / docker
 
 
-#### Links
+##### Links
 1. [AWS - Tutorial: Build and Test a Serverless Application with AWS Lambda](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/lambda-build-test-severless-app.html)
 1. [Udemy - AWS Lambda For The .NET Developer](https://www.udemy.com/course/aws-lambda-dotnet/)
 1. [AWS::Serverless::Function](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-function.html)
